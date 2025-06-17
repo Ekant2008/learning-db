@@ -10,6 +10,8 @@ public interface Table extends Iterable<Row> {
     Table project(Expression... projections);
     Table join(Table input);
 
+    Table aggregate(Expression groupBy, AggregateExpression... expression);
+
     abstract class AbstractTable implements Table {
         public Table filter(Filter filter){
             List<Row> filtered =new ArrayList<>();
@@ -42,6 +44,11 @@ public interface Table extends Iterable<Row> {
             }
             return new ListBackedTable(result);
         }
+
+        @Override
+        public Table aggregate(Expression groupBy, AggregateExpression... expression) {
+            return null;
+        }
     }
 
 
@@ -59,6 +66,7 @@ public interface Table extends Iterable<Row> {
         public Iterator<Row> iterator() {
             return rows.stream().iterator();
         }
+
     }
 }
 
