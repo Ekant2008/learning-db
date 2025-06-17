@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire8494579079377033513\surefirebooter-20250608122035917_3.jar C:\Users\HP\AppData\Local\Temp\surefire8494579079377033513 2025-06-08T12-20-35_657-jvmRun1 surefire-20250608122035917_1tmp surefire_0-20250608122035917_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire10302876279197532045\surefirebooter-20250617184119651_3.jar C:\Users\HP\AppData\Local\Temp\surefire10302876279197532045 2025-06-17T18-41-15_924-jvmRun1 surefire-20250617184119651_1tmp surefire_0-20250617184119651_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\HP\IdeaProjects\learning-db\target\test-classes;C:\Users\HP\IdeaProjects\learning-db\target\classes;C:\Users\HP\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\HP\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.0\jackson-databind-2.17.0.jar;C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.0\jackson-annotations-2.17.0.jar;C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy\1.14.9\byte-buddy-1.14.9.jar;C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.0\jackson-core-2.17.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire8494579079377033513\surefirebooter-20250608122035917_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire10302876279197532045\surefirebooter-20250617184119651_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6-LTS"/>
@@ -51,7 +51,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Users\HP\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\HP\AppData\Local\Programs\Python\Python312\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\MongoDB\Server\6.0\bin;C:\Program Files\mongosh-2.0.1-win32-x64\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Java\jdk-20\bin;C:\Program Files\Java\jre-1.8\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\apache-maven-3.9.10\bin;C:\Users\HP\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jre-1.8\bin;C:\Program Files\Java\jdk-20\bin;C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HP\AppData\Roaming\npm;F:\IntelliJ IDEA Community Edition 2025.1.2\bin;;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Users\HP\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\HP\AppData\Local\Programs\Python\Python312\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\MongoDB\Server\6.0\bin;C:\Program Files\mongosh-2.0.1-win32-x64\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Java\jdk-20\bin;C:\Program Files\Java\jre-1.8\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\apache-maven-3.9.10\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\HP\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jre-1.8\bin;C:\Program Files\Java\jdk-20\bin;C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HP\AppData\Roaming\npm;F:\IntelliJ IDEA Community Edition 2025.1.2\bin;;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
@@ -59,8 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="notNullTest" classname="com.one211.learning.db.FilterTest" time="0.0"/>
-  <testcase name="orTest" classname="com.one211.learning.db.FilterTest" time="0.0"/>
-  <testcase name="andTest" classname="com.one211.learning.db.FilterTest" time="0.0"/>
-  <testcase name="isEqualTest" classname="com.one211.learning.db.FilterTest" time="0.0"/>
+  <testcase name="notNullTest" classname="com.one211.learning.db.FilterTest" time="0"/>
+  <testcase name="orTest" classname="com.one211.learning.db.FilterTest" time="0"/>
+  <testcase name="andTest" classname="com.one211.learning.db.FilterTest" time="0"/>
+  <testcase name="isEqualTest" classname="com.one211.learning.db.FilterTest" time="0"/>
 </testsuite>

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.one211.learning.db.FilterTest
+Test set: com.one211.learning.db.TableTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.one211.learning.db.FilterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.599 s - in com.one211.learning.db.TableTest

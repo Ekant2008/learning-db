@@ -1,14 +1,14 @@
 package com.one211.learning.db;
 
-import junit.framework.TestCase;
-import org.junit.Test;
-import org.junit.jupiter.api.Disabled;
 
+import org.junit.Test;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+import static com.one211.learning.db.Expression.col;
 import static org.junit.Assert.assertEquals;
 
 public class TableTest  {
@@ -92,5 +92,48 @@ public class TableTest  {
             assertEquals("Bob", row2.get(0));
             assertEquals(25, row2.get(1));
         }
+    @Test
+    public void testGroupByAndAggregate() {
+        List<Row> rows = Arrays.asList(
+                Row.apply(new Object[]{"Alice", 10}),
+                Row.apply(new Object[]{"Bob", 20}),
+                Row.apply(new Object[]{"Alice", 30}),
+                Row.apply(new Object[]{"Bob", 25})
+        );
+
+        Table table = new Table.ListBackedTable(rows);
+
+        // Group by name (col 0), count and sum col 1
+        Table result = table.aggregate(
+                col(0),
+                new AggregateExpression.Count(),
+                new AggregateExpression.Sum(col(1))
+        );
+
+        List<Row> results = new ArrayList<>();
+        for (Row r : result) {
+            results.add(r);
+        }
+
+        assertEquals(2, results.size());
+
+        Row aliceRow = results.stream()
+                .filter(r -> r.get(0).equals("Alice"))
+                .findFirst()
+                .orElseThrow();
+
+        assertEquals("Alice", aliceRow.get(0));
+        assertEquals(2, aliceRow.get(1));   // Count
+        assertEquals(40.0, aliceRow.get(2)); // Sum
+
+        Row bobRow = results.stream()
+                .filter(r -> r.get(0).equals("Bob"))
+                .findFirst()
+                .orElseThrow();
+
+        assertEquals("Bob", bobRow.get(0));
+        assertEquals(2, bobRow.get(1));    // Count
+        assertEquals(45.0, bobRow.get(2)); // Sum
+    }
 
 }

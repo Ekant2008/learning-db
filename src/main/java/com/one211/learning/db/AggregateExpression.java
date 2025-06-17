@@ -3,6 +3,8 @@ package com.one211.learning.db;
 public interface AggregateExpression extends Expression {
     Object finalValue();
 
+    AggregateExpression fresh();
+
     public final class Min implements AggregateExpression {
         private final Expression expression;
         Object state = null;
@@ -15,6 +17,12 @@ public interface AggregateExpression extends Expression {
         public Object finalValue() {
             return state;
         }
+
+        @Override
+        public AggregateExpression fresh() {
+            return new Min(expression);
+        }
+
 
         @Override
         public Object apply(Row row) {
@@ -37,6 +45,12 @@ public interface AggregateExpression extends Expression {
         public Object finalValue() {
             return state;
         }
+
+        @Override
+        public AggregateExpression fresh() {
+            return new Max(expression);
+        }
+
 
         @Override
         public Object apply(Row row)  {
@@ -68,6 +82,11 @@ public interface AggregateExpression extends Expression {
             }
             return sum;
         }
+        @Override
+        public AggregateExpression fresh() {
+            return new Sum(expression);
+        }
+
     }
     public final class Count implements AggregateExpression{
         private int count = 0;
@@ -75,6 +94,12 @@ public interface AggregateExpression extends Expression {
         public Object finalValue() {
             return count;
         }
+
+        @Override
+        public AggregateExpression fresh() {
+            return new Count();
+        }
+
 
         @Override
         public Object apply(Row row) {
@@ -107,6 +132,12 @@ public interface AggregateExpression extends Expression {
             double s = (Double) sum.finalValue();
             return s / c;
         }
+
+        @Override
+        public AggregateExpression fresh() {
+            return new Average(sum.expression); // Reuse same expression
+        }
+
     }
 
 }

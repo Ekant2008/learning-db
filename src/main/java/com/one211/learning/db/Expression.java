@@ -36,4 +36,8 @@ public interface Expression {
             return row.get(index);
         }
     }
+    static BoundedExpression col(int index) {
+        return new BoundedExpression(index);
+    }
+
 }

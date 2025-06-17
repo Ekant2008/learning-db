@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.one211.learning.db.ExpressionTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s -- in com.one211.learning.db.ExpressionTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.one211.learning.db.ExpressionTest

@@ -6,10 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.plaf.ListUI;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public interface Table extends Iterable<Row> {
     Table filter(Filter filter);
@@ -87,8 +84,48 @@ public interface Table extends Iterable<Row> {
 
         @Override
         public Table aggregate(Expression groupBy, AggregateExpression... expression) {
-            return null;
+            Map<Object, List<Row>> grouped = new HashMap<Object, List<Row>>();
+
+            Iterator<Row> thisIterator = this.iterator();
+
+            while (thisIterator.hasNext()){
+                Row currentRow = thisIterator.next();
+                Object key = groupBy.apply(currentRow);
+                grouped.computeIfAbsent(key, k -> new ArrayList<>()).add(currentRow);
+            }
+
+            List<Row> resultRows = new ArrayList<>();
+
+            for (Map.Entry<Object, List<Row>> entry : grouped.entrySet()) {
+                Object groupKey = entry.getKey();
+                List<Row> rowsInGroup = entry.getValue();
+
+                // Create fresh instances of each aggregation per group
+                AggregateExpression[] aggInstances = new AggregateExpression[expression.length];
+                for (int i = 0; i < expression.length; i++) {
+                    aggInstances[i] = expression[i].fresh();
+                }
+
+                // Apply rows to aggregate expressions
+                for (Row r : rowsInGroup) {
+                    for (AggregateExpression agg : aggInstances) {
+                        agg.apply(r);
+                    }
+                }
+
+                // Collect results: group key + all aggregate final values
+                Object[] result = new Object[aggInstances.length + 1];
+                result[0] = groupKey;
+                for (int i = 0; i < aggInstances.length; i++) {
+                    result[i + 1] = aggInstances[i].finalValue();
+                }
+
+                resultRows.add(Row.apply(result));
+            }
+
+            return new ListBackedTable(resultRows);
         }
+
     }
 
 
